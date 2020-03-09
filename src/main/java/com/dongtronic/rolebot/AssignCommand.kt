@@ -35,8 +35,8 @@ class AssignCommand() : Command() {
     private fun doTheThing(event: CommandEvent) {
         val roles = event.message.mentionedRoles
         val everyone = event.message.mentionsEveryone()
-        var count = 0
-        var givenRole: Role
+        val count: Int
+        val givenRole: Role
 
         if (everyone) {
             if (roles.size != 1) {
